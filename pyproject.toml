@@ -1,0 +1,38 @@
+[tool.poetry]
+authors = ["Manuel Mendez <git@i.m.mmlb.dev>"]
+description = "ansi to plain text converter"
+name = "ansi2txt"
+readme = "README.md"
+version = "0.1.0"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Terminals",
+  "Topic :: Text Processing",
+  "Topic :: Text Processing :: Filters",
+  "Topic :: Utilities",
+]
+
+[tool.poetry.scripts]
+ansi2txt = "ansi2txt:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+pytest = "^7.2.1"

@@ -1,0 +1,28 @@
+ANSI2TXT(1)
+
+# NAME
+
+ansi2txt - ansi to plain text converter
+
+# SYNOPSIS
+
+*ansi2txt* < _input_
+
+# DESCRIPTION
+
+The ansi2txt utility reads text containing ANSI escape codes and writes plain ASCII text.
+It works as a filter, reading from stdin, removing all ANSI codes and sending the output to stdout.
+
+# CAVEATS
+
+All ANSI codes are simply ignored/dropped, including all cursor positioning ones.
+Sometimes this is what you want, sometimes it isn't.
+
+# SEE ALSO
+
+ansi2txt of colorized-logs project: https://github.com/kilobyte/colorized-logs/blob/master/ansi2txt.c
+
+# Authors
+
+Maintained by Manuel Mendez <i@m.mmlb.dev>.
+Up to date sources can be found at https://github.com/mmlb/ansi2txt.

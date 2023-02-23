@@ -3,7 +3,7 @@ authors = ["Manuel Mendez <git@i.m.mmlb.dev>"]
 description = "ansi to plain text converter"
 name = "ansi2txt"
 readme = "README.md"
-version = "0.1.0"
+version = "0.2.0"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Environment :: Console",

@@ -2,6 +2,7 @@
 [devshell]
 motd = ""
 packages = [
+  "bats",
   "nodePackages.prettier",
   "poetry",
   "scdoc",

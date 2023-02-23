@@ -23,4 +23,4 @@ jobs:
         run: nix develop --command prettier --check .
 
       - name: Run test
-        run: nix develop --command bash ansi2txt.test.sh
+        run: nix develop --command bats ansi2txt.bats

@@ -11,8 +11,9 @@ Here are some related projects
 
 ## Acknowledgements
 
-This code base is a translation/port of the `ansi2txt.c` code base from [colorized-logs](https://github.com/kilobyte/colorized-logs) to Python3.
+This code base is a translation/port of the `ansi2txt.c` code base from [colorized-logs](https://github.com/kilobyte/colorized-logs) to Python3 and Bash.
 This project came about because I liked the original `ansi2txt`'s output but did not want to have to compile it or ship binaries around.
+I ported ansi2txt.c → ansi2txt.py but then came across an environment without python so went ansi2txt.py → ansi2txt.sh.
 
 ## License
 
@@ -23,5 +24,5 @@ This project came about because I liked the original `ansi2txt`'s output but did
 To run tests, run the following command
 
 ```bash
-pytest
+bash ansi2txt.test.sh
 ```

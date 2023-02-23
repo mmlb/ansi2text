@@ -6,15 +6,15 @@ import sys
 
 
 def getchar():
-    return sys.stdin.buffer.read(1)
+    return sys.stdin.read(1)
 
 
 def putchar(c):
-    return sys.stdout.buffer.write(c)
+    return sys.stdout.write(c)
 
 
 def main():
-    EOF = b""
+    EOF = ""
     ch = None
 
     while ch != EOF:

@@ -2,6 +2,8 @@
 
 # SPDX-License-Identifier: MIT AND AGPL-3.0-only
 
+# Up to date sources can be found at https://github.com/mmlb/ansi2txt
+
 getchar() {
 	read -rN1 ch
 	#echo -n "${BASH_LINENO[0]}: ${#ch}: |" >&2

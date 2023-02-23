@@ -24,5 +24,5 @@ I ported ansi2txt.c → ansi2txt.py but then came across an environment without 
 To run tests, run the following command
 
 ```bash
-bash ansi2txt.test.sh
+bats ansi2txt.bats
 ```

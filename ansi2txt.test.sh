@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 t=$(
 	tr -d '\n' <<-'EOF'
 		foo\e[1mbar\e[0m\n
@@ -9,9 +11,9 @@ t=$(
 	EOF
 )
 
-want='foobar
+want="foobar
 
-'
+"
 
 if false; then
 	{
@@ -24,7 +26,7 @@ if false; then
 	} >&2
 fi
 
-echo 1..1
+echo 1..2
 
 ret=0
 if diff -u <(printf "$t" | ./ansi2txt.py | hexdump -C) <(echo -n "$want" | hexdump -C) &>/dev/null; then
@@ -32,6 +34,14 @@ if diff -u <(printf "$t" | ./ansi2txt.py | hexdump -C) <(echo -n "$want" | hexdu
 else
 	echo "not ok 1 - ansi2txt.py"
 	diff -u <(printf "$t" | ./ansi2txt.py | hexdump -C) <(echo -n "$want" | hexdump -C) | sed 's|^|\t|'
+	ret=1
+fi
+
+if diff -u <(printf "$t" | ./ansi2txt.sh | hexdump -C) <(echo -n "$want" | hexdump -C) &>/dev/null; then
+	echo "ok 2 - ansi2txt.sh"
+else
+	echo "not ok 2 - ansi2txt.sh"
+	diff -u <(printf "$t" | ./ansi2txt.sh | hexdump -C) <(echo -n "$want" | hexdump -C) | sed 's|^|\t|'
 	ret=1
 fi
 

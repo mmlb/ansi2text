@@ -23,5 +23,5 @@ This project came about because I liked the original `ansi2txt`'s output but did
 To run tests, run the following command
 
 ```bash
-pytest
+bash ansi2txt.test.sh
 ```
